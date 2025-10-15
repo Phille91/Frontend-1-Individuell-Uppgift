@@ -1,0 +1,112 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #475657;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header{
+    text-align: center;
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+    padding-top: 1rem;
+    color: antiquewhite;
+}
+
+h5{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#form-container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#post-form{ 
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 700px;
+    background: #f0f3f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#post-container{
+    width: 30vw;
+    max-width: 700px;
+    padding: 10px;
+    background: #f0f3f5;
+    border-radius: 10px;
+}
+
+.comment-section{
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #e8ebed;
+    border-radius: 8px;
+}
+
+.comment-form{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.comment-form input{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.comment-item{
+    background: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.comment-btns{
+    display: flex;
+    gap: 0.5rem;
+    
+}
+
+.comment-btns button{
+    border: none;
+    background: #dcdcdc;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post, .comment-item p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+        padding: 0;
+    }
+}
