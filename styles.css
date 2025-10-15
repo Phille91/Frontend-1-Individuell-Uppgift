@@ -7,7 +7,8 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-color: #475657;
+    background: #22C1C3;
+background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 #container{
@@ -21,12 +22,14 @@ body{
 header{
     text-align: center;
     margin: 0;
+    padding: 30px;
+
 }
 
 h1{
     margin: 0;
     padding-top: 1rem;
-    color: antiquewhite;
+    color: rgb(32, 30, 28);
 }
 
 h5{
@@ -44,7 +47,7 @@ h5{
     flex-direction: column;
     width: 80vw;
     max-width: 700px;
-    background: #f0f3f5;
+    background: #bbcf98;
     padding: 1.5rem;
     border-radius: 10px;
     box-sizing: border-box;
@@ -54,14 +57,14 @@ h5{
     width: 30vw;
     max-width: 700px;
     padding: 10px;
-    background: #f0f3f5;
+    background: #bbcf98;
     border-radius: 10px;
 }
 
 .comment-section{
     margin-top: 1rem;
     padding: 0.8rem;
-    background: #e8ebed;
+    background: #e7f0d7;
     border-radius: 8px;
 }
 
