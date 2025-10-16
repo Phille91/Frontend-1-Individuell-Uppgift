@@ -39,6 +39,15 @@ const postContainer = document.getElementById('post-section')
         pContent.textContent = content
         post.appendChild(pContent)
 
+        const deletePostButton = document.createElement('button')
+        deletePostButton.textContent = 'Delete'
+        deletePostButton.type = 'button'
+        post.appendChild(deletePostButton)
+
+        deletePostButton.addEventListener('click', () =>{
+            postContainer.removeChild(post)
+        })
+
         // Skapa kommentarfältet
 
         const commentSection = document.createElement('div')
@@ -82,6 +91,14 @@ const postContainer = document.getElementById('post-section')
             commentText.textContent = text
             commentItem.appendChild(commentText)
 
+            const cAuthor = document.createElement('p')
+            cAuthor.innerHTML = `<strong>Författare:</strong> ${author || 'Anonymous'}`
+            commentItem.appendChild(cAuthor)
+
+            const cDate = document.createElement('p')
+            cDate.innerHTML = `<strong>Datum:</strong> ${dateString}`
+            commentItem.appendChild(cDate)
+
             // Skapa knapparna för kommentarer
 
             const btnContainer = document.createElement('div')
@@ -105,32 +122,32 @@ const postContainer = document.getElementById('post-section')
 
             // Skapa räknaren för likes/dislikes och delete
             
-            let likes = 0
-            let dislikes = 0
+        let likes = 0
+        let dislikes = 0
 
-            likeBtn.addEventListener('click', () =>{
-                likes++
-                likeBtn.textContent = `👍 ${likes}`
-            })
+        likeBtn.addEventListener('click', () =>{
+            likes++
+            likeBtn.textContent = `👍 ${likes}`
+         })
 
-            dislikeBtn.addEventListener('click', () =>{
-                dislikes++
-                dislikeBtn.textContent = `👎 ${dislikes}`
-            })
-
-            deleteBtn.addEventListener('click', () =>{
-                commentList.removeChild(commentItem)
-            })
+        dislikeBtn.addEventListener('click', () =>{
+            dislikes++
+            dislikeBtn.textContent = `👎 ${dislikes}`
         })
 
-        const hr = document.createElement('hr')
-        post.appendChild(hr)
-
-        postContainer.appendChild(post)
-  
-        
-        form.reset()
-        
+        deleteBtn.addEventListener('click', () =>{
+            commentList.removeChild(commentItem)
+        })
     })
+
+    const hr = document.createElement('hr')
+    post.appendChild(hr)
+
+    postContainer.appendChild(post)
+  
+    
+    form.reset()
+        
+})
 
 
