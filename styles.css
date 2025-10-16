@@ -7,8 +7,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background: #22C1C3;
-background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background: #829381;
 }
 
 #container{
@@ -78,6 +77,10 @@ h5{
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 5px;
+}
+
+.comment-form button{
+    display: inline-block;
 }
 
 .comment-item{
